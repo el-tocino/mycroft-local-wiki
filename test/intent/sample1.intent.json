@@ -1,8 +1,0 @@
-{
-  "utterance": "local wiki",
-  "intent_type": "RandomEventIntent",
-  "intent": {
-    "RandomEventKeyword": "local wiki"
-  }
-}
-
