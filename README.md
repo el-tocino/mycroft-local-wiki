@@ -6,7 +6,8 @@ Would recommend you use a backup of the simple wiki w/o images for space.
 
 # running locally
 
-On a stretch pi....most of these can be adjusted for other distros pretty easily.
+On a stretch pi....most of these can be adjusted for other distros pretty easily. Also works with lighttpd. 
+
 ```
 sudo apt install apache2 php php7.0-sqlite php-mbstring -y
 
