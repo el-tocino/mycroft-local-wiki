@@ -46,9 +46,9 @@ cd opt/mediawiki-1.31.0
 php maintenance/importDump.php < /tmp/simplewiki-20180901-pages-articles-multistream.xml
 
 ```
-...this goes like 1.3 pg/sec on a pi3.  160k pages.  
+...this goes like 1.3 pg/sec on a pi3.  160k pages.  Yeah....
 
-for wiktionary it's also really slow:
+For wiktionary it's even slower! (and also a much bigger file)
 
 ```
 cd /tmp/
