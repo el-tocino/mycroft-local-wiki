@@ -6,6 +6,7 @@ Would recommend you use a backup of the simple wiki w/o images for space.
 
 # running locally
 
+(Don't do this)
 On a stretch pi....most of these can be adjusted for other distros pretty easily. Also works with lighttpd. 
 
 ```
@@ -60,3 +61,7 @@ sudo php maintenance/importDump.php < /tmp/enwiktionary-20180901-pages-articles-
 
 ```
 After all this finishes, restart apache and navigate to: http://pi-ip-or-name/localwiki and verify it works as expected.
+
+
+## Better options 
+If you have a machine that can run mysql instead of sqlite, and has more than 1gb of ram, you might consider doing this.  A pi3 and this is, frankly, slow to the point of impracticality.  If you have a beefier machine, go for it.  Locally compiled versions of apache2, php, mariadb with 2gb of innodb buffer pool, running on a xeon make for a more reasonable backend to do this.  
