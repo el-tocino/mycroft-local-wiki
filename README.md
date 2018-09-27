@@ -6,14 +6,13 @@ Would recommend you use a backup of the simple wiki w/o images for space.
 
 # running locally
 
-(Don't do this)
-On a stretch pi....most of these can be adjusted for other distros pretty easily. Also works with lighttpd. 
+(Don't do this on a pi....) most of these can be adjusted for other distros pretty easily. Also works with lighttpd. 
 
 ```
-sudo apt install apache2 php php7.0-sqlite php-mbstring -y
+sudo apt install apache2 php php7.0-mysql mysql-server php-mbstring -y
 
 ```
-may be 7.1 on other distros, no biggie.
+may be php7.1 on some distros.
 
 Next up, install mediawiki
 https://www.mediawiki.org/wiki/Manual:Installation_guide
@@ -26,15 +25,13 @@ tar xfz mediawiki-1.31.0.tar.gz
 cp -R mediawiki-1.31.0 wiktionary
 cd /var/www/html
 ln -s /opt/mediawiki-1.31.0 localwiki
-ln -s /opt/wiktionary wiktionary
 cd /opt
 mkdir sqlite
 cd sqlite
 mkdir wikipedia
-mkdir wiktionary
 
 ```
-Now, run through setup for each of these, pointing the sqlite location to the relevant location (/opt/sqlite/wikipedia or /opt/sqlite/wiktionary) 
+Now, run through mediawiki setup for each of these, pointing the sqlite location to the relevant location (/opt/sqlite/wikipedia or /opt/sqlite/wiktionary) 
 
 After setup is completed and you get the generic welcome message on the site, import some data...and wait forever.  Do these under screen for your own sanity
 
@@ -49,6 +46,8 @@ sudo php maintenance/importDump.php < /tmp/simplewiki-20180901-pages-articles-mu
 
 ```
 ...this goes like .7 pg/sec on a pi3.  160k pages. It's two and a half days. (correction: more like 3.5...it slows way down) 
+
+On an i7, it goes at 17pg/sec.
 
 For wiktionary it's even slower (and also a much bigger file)!
 
