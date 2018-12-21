@@ -63,4 +63,4 @@ After all this finishes, restart apache and navigate to: http://pi-ip-or-name/lo
 
 
 ## Better options 
-If you have a machine that can run mysql instead of sqlite, and has more than 1gb of ram, you might consider doing this.  A pi3 and this is, frankly, slow to the point of impracticality.  If you have a beefier machine, go for it.  Locally compiled versions of apache2, php, mariadb with 2gb of innodb buffer pool, running on a xeon make for a more reasonable backend to do this.  
+A pi3 and this is, frankly, slow to the point of impracticality.  If you have a beefier machine, go for it.  Locally compiled versions of apache2, php, mariadb, and running the db with 1-2gb of innodb buffer pool, make for a more reasonable backend to do this.  
