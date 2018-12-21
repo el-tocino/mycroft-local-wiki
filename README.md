@@ -31,7 +31,7 @@ cd mysql
 mkdir wikipedia
 
 ```
-Now, run through mediawiki setup for each of these, pointing the sqlite location to the relevant location (/opt/mysql/wikipedia or /opt/mysql/wiktionary) 
+Now, run through mediawiki setup for each of these, pointing the mysql location to the relevant location (/opt/mysql/wikipedia or /opt/mysql/wiktionary) 
 
 After setup is completed and you get the generic welcome message on the site, import some data...and wait forever.  Do these under screen for your own sanity
 
