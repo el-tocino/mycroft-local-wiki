@@ -26,12 +26,12 @@ cp -R mediawiki-1.31.0 wiktionary
 cd /var/www/html
 ln -s /opt/mediawiki-1.31.0 localwiki
 cd /opt
-mkdir sqlite
-cd sqlite
+mkdir mysql
+cd mysql
 mkdir wikipedia
 
 ```
-Now, run through mediawiki setup for each of these, pointing the sqlite location to the relevant location (/opt/sqlite/wikipedia or /opt/sqlite/wiktionary) 
+Now, run through mediawiki setup for each of these, pointing the sqlite location to the relevant location (/opt/mysql/wikipedia or /opt/mysql/wiktionary) 
 
 After setup is completed and you get the generic welcome message on the site, import some data...and wait forever.  Do these under screen for your own sanity
 
